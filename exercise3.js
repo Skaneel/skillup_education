@@ -69,3 +69,84 @@
 // for (i in day) {
 //     console.log(i + ':' + day[i]);
 // }
+
+// Задание 8. Дан массив товаров, выведите товары на страницу цены которых больше 20
+
+// var goods = {
+//     "dd": {
+//         "name": "Яблоки",
+//         "cost": 13
+//     },
+//     "dc": {
+//         "name": "Груши",
+//         "cost": 23
+//     },
+//     "cd": {
+//         "name": "Абрикосы",
+//         "cost": 33
+//     },
+//     "dee": {
+//         "name": "Сливы",
+//         "cost": 43
+//     },
+//     "dd2": {
+//         "name": "Вишни",
+//         "cost": 19
+//     },
+// };
+//
+// var j, i;
+// for (i in goods) {
+//     for (j in goods[i]) {
+//         if (j == 'cost' && goods[i][j] > 20) {
+//             console.log(i);
+//             console.log(goods[i]);
+//         }
+//     }
+// }
+
+// Задание 9. Дан массив товаров, выведите товары на страницу HTML, цены которых лежат в диапазоне от 220 до 300 и количество (amount) больше 200
+
+// var goods1 = {
+//     "apple": {
+//         "name": "Яблоки",
+//         "cost": 230,
+//         "amount": 300
+//     },
+//     "pear": {
+//         "name": "Груши",
+//         "cost": 34,
+//         "amount": 100
+//     },
+//     "apricot": {
+//         "name": "Абрикосы",
+//         "cost": 23,
+//         "amount": 170
+//     },
+//     "plum": {
+//         "name": "Сливы",
+//         "cost": 21,
+//         "amount": 250
+//     },
+//     "cherry": {
+//         "name": "Вишни",
+//         "cost": 19,
+//         "amount": 312
+//     },
+// };
+//
+// var j, i, amount, c;
+// for (i in goods1) {
+//     for (j in goods1[i]) {
+//         if (j == 'cost' && goods1[i][j] >= 220 && goods1[i][j] <= 300) {
+//             for (amount in goods1[i]) {
+//                 if (amount == 'amount' && goods1[i][j] >= 200) {
+//                     c = goods1[i];
+//                     console.log(i);
+//                     console.log(goods1[i]);
+//                 }
+//             }
+//
+//         }
+//     }
+// }
