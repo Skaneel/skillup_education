@@ -1,42 +1,19 @@
-<?php
-///////Дан массив с элементами 1, 2, 3, 4, 5. С помощью цикла foreach найдите сумму квадратов элементов этого массива. Результат запишите переменную $result.
-$arr = [1, 2, 3, 4, 5];
-$result = 0;
-foreach ($arr as $value) {
-    $c = pow($value, 2);
-    $result += $c;
-}
-echo 'сумму квадратов ='.' '.$result. "\n\n<br><br>";
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 
+<form method="post" action="registr.php">
+    <input type="email" name="email">
+    <button>Подписаться</button>
+    <?= !empty($_POST['email']) ? $_POST['email'] . ' рады видеть вас в подписчиках!' : "введите корректный Email" ?>
+</form>
 
-//////Дан массив $arr с ключами 'Коля', 'Вася', 'Петя' и с элементами '200', '300', '400'. С помощью цикла foreach выведите на экран столбец строк такого формата: 'Коля - зарплата 200 долларов.'.
-
-$arr1 = ['Коля' => 200, 'Вася' => 300, 'Петя'=> 400, 'Федя'=>500, 'Клава'=>600, 'Мася' =>800];
-
-foreach ($arr1 as $key => $value1) {
-   echo $key . ', зарплата '. $value1 . ' долларов'."\n<br>";
-}
-echo "\n<br>";
-/////Составьте массив дней недели. С помощью цикла foreach выведите все дни недели, а текущий день выведите курсивом. Текущий день должен храниться в переменной $day.
-
-$arr2 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-$d = date("l");
-foreach ($arr2 as $value2) {
-    if ($value2 == $d) {
-        echo "Today is <em>" . $value2. " </em>"."\n<br>";
-    } else echo $value2 . "\n<br>";
-
-
-}
-echo "\n";
-//Дан массив $arr. С помощью цикла foreach запишите английские названия в массив $en, а русские - в массив $ru.
-
-$arr3 = ['green' => 'зеленый', 'red' => 'красный', 'blue' => 'голубой'];
-$arrRu = [];
-$arrEn = [];
-foreach ($arr3 as $key3 => $value3) {
-    $arrRu[] = $key3;
-    $arrEn[] = $value3;
-}
-var_dump($arrEn);
-var_dump($arrRu);
+</body>
+</html>
