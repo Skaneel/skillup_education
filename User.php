@@ -3,9 +3,9 @@
 
 class User
 {
-    private $name;
+    protected $name;
 
-    private $age;
+    protected $age;
 
     function setName($name)
     {
