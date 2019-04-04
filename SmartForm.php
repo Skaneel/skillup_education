@@ -23,3 +23,4 @@ if (!empty($_POST['name'] || $_POST['pass'])) {
   echo 'массив пустой';
 }
 include 'index.php';
+//////////////////////////////
