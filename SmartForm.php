@@ -6,10 +6,22 @@ class SmartForm extends Form
 
     public function myecho()
     {
-        var_dump($this->arr);
+        var_dump($_POST);
     }
 
 }
 
 $obj2 = new SmartForm;
-$obj2->myecho();
+
+
+
+if (!empty($_POST['name'] || $_POST['pass'])) {
+    echo 'массив не пустой';
+    $deckriptor = fopen('text.txt', 'a');
+    $str = $_POST['name'] . "\t" . $_POST['pass'];
+    fputs($deckriptor, $str);
+    $obj2->myecho();
+    fclose($deckriptor);
+} else {
+  echo 'массив пустой';
+}
