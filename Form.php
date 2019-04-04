@@ -10,7 +10,7 @@ class Form
         $html = '';
         $this->arr['type'] = $type;
         $this->arr['placeholder'] = $placeholder;
-        $this->arr['name'] = $name; // сохранить в тектовый файл <<
+        $this->arr['name'] = $name; // в тектовый файл <<<
 
         echo $html .= '<input type="' . $type . '" name="' . $name . '" placeholder="' . $placeholder . '" value="' . $_POST['name'] .'">';
 
@@ -26,7 +26,7 @@ class Form
     public function password($placeholder, $name)
     {
         $this->arr['placeholder'] = $placeholder;
-        $this->arr['password'] = $name; // это нужно сохранить в файл txt <<
+        $this->arr['password'] = $name; // в файл txt <<<
         $str = '';
         $str .= '<input ' . 'placeholder="' . $placeholder . '" name="' . $name . '" value="' . $_POST['pass'] . '"></br></br>';
         echo $str;
