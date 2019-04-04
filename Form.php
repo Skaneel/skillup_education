@@ -12,7 +12,7 @@ class Form
         $this->arr['placeholder'] = $placeholder;
         $this->arr['name'] = $name; // сохранить в тектовый файл <<
 
-        echo $html .= '<input type="' . $type . '" name="' . $name . '" placeholder="' . $placeholder . '" >';
+        echo $html .= '<input type="' . $type . '" name="' . $name . '" placeholder="' . $placeholder . '" value="' . $_POST['name'] .'">';
 
     }
 
@@ -28,7 +28,7 @@ class Form
         $this->arr['placeholder'] = $placeholder;
         $this->arr['password'] = $name; // это нужно сохранить в файл txt <<
         $str = '';
-        $str .= '<input ' . 'placeholder="' . $placeholder . '" name="' . $name . '" ></br></br>';
+        $str .= '<input ' . 'placeholder="' . $placeholder . '" name="' . $name . '" value="' . $_POST['pass'] . '"></br></br>';
         echo $str;
 
     }
@@ -52,6 +52,5 @@ class Form
             $str .= '<form ' . 'action="' . $action . '" method="' . $method . '" >';
         echo $str;
     }
-
 }
 

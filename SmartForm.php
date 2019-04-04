@@ -8,20 +8,18 @@ class SmartForm extends Form
     {
         var_dump($_POST);
     }
-
 }
 
 $obj2 = new SmartForm;
 
-
-
 if (!empty($_POST['name'] || $_POST['pass'])) {
     echo 'массив не пустой';
     $deckriptor = fopen('text.txt', 'a');
-    $str = $_POST['name'] . "\t" . $_POST['pass'];
+    $str = $_POST['name'] . "\t" . $_POST['pass'] . "\n";
     fputs($deckriptor, $str);
     $obj2->myecho();
     fclose($deckriptor);
 } else {
   echo 'массив пустой';
 }
+include 'index.php';
