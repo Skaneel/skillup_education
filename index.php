@@ -1,9 +1,13 @@
+<form action="index.php" method="post">
+    <p>Введите страницу</p>
+    <input type="text" name="value">
+    <input type="submit" value=" отправить ">
+</form>
+
 <?php
 session_start();
 
-isset($_SESSION['sess']) ? $count = $_SESSION['sess']: $count = 0;
-$count++;
-$_SESSION['sess'] = $count;
+$a = $_SESSION['value'] = $_POST['value'];
 
-echo $count; echo '</br>';
-echo session_id() . "\n";
+if (isset($_SESSION['value']))
+header("Location: test.php");
